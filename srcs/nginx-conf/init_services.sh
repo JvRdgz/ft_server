@@ -12,8 +12,6 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 echo "UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE user='root';" | mysql -u root
 mysql -u root < /var/www/html/phpMyAdmin-5.0.4-all-languages/sql/create_tables.sql
 
-# Para salir probar con 'exit' o 'quit'
-
-exit
+echo "quit" | mysql -u root
 
 bash
