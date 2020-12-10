@@ -37,19 +37,19 @@ cd ft_server
 starts PhpMyAdmin and Wordpress services. Then, it creates a MySQL Database that
 works with PhpMyAdmin, as well as in Wordpress. This server also uses SSL protocol
 but it is not certificated. You can certificate it by your own.</br>
-<br>Once everything is running, you could start developing your own web server!</br>
+<br>Once everything is running, you could start developing your own web page!</br>
 
 ## How to run it
-First, you need to create the container and then, you need to run the image.
+First, you need to create the container and then, you need to run the Docker image.
 But... How do we do that? Well, once you've clone this repository on your local, 
-i've made to ``.sh`` scripts that makes everything for you ;).
+I've made two ``.sh`` scripts that makes everything for you ;).
 Just inside of the ft_server folder, you will see two scripts:
 ```
 execute_server_linux.sh
 execute_server_macosx.sh
 ```
-Obviously, depends on which Operating system you are using, you will need yo run
-one script or the other. To run it, you can simply use:
+Obviously, depends on which Operating system you are using, you will need to run
+one script or the other. To run it, you can simply type:
 ```
 sh execute_server_....sh
 ```
@@ -68,10 +68,11 @@ script called ``autoindex_off.sh`` and ``autoindex_on.sh``.
 Those scripts modifies the autoindex instruction from the Nginx configuration file.
 At this moment, you are running the "default" Nginx configuration file, with the
 ``autoindex on``. But, if you run the ``autoindex_off.sh`` script, it will turn
-the autoindex instruction to *on* and if you reload the localhost web page that you
+the autoindex instruction *of* and if you reload the localhost web page that you
 run before on your web browser, it will shows a custom ``index.html`` file. This
-file are in the ``/var/www/html/`` directory, and by this way you can make your
-on web page!! Isn't that awesome?
+file is allocated in the ``/var/www/html/`` directory, and you can change this
+custom index.html the way you want and start creating your onw web page!! 
+Isn't that awesome?
 Eventually, if you want to close and stop the webserver, you have to type inside
 the container this command:
 ```
